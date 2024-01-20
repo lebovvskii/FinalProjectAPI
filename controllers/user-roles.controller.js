@@ -16,7 +16,7 @@ class UserRolesController {
   }
 
   async deleteUserRole(req, res) {
-    const userRoleId = req.params.team_id;
+    const userRoleId = req.params.user_role_id;
     const userRole = await db.query(
       'DELETE FROM User_Roles WHERE user_role_id = $1',
       [userRoleId],
